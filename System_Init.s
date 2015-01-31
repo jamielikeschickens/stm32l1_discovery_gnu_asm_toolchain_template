@@ -88,11 +88,10 @@ Button_Wait:
 	STR r1, [r0]
 	B Init_End
 
-
-	
 Init_End:
-	LDR r0, =Lab_Start
-	BX r0
+	@LDR r0, =Lab_Start
+	@BX r0
+	BL Lab_Start
 
 	@ Return point is reached only after Lab code is completed
 	BX lr 

@@ -22,10 +22,9 @@ Lab_Start:
 @ ===================
 @ Your code goes here
 @ ===================
-
 @ ================
 @ End your program
 @ ================
 Stop:
-B Stop @ an infinite loop
+	B Stop @ an infinite loop
 .end @ Mark end of file
