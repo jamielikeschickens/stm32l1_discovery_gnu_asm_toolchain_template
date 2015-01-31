@@ -21,7 +21,9 @@ This template modifies various pieces of other templates:
 and rewrites the provided `System_Init.s` and `Lab1-Task1.s` provided by Simon to use GNU ASM directives.
 
 ## Compile your code
-To simply compile your code first make sure all your sourcefiles are referenced in the Makefile SRCS variable. You can then just run `make` to compile your code into both a ELF binary (can be loaded into gdb) and a bin (for writing straight to flash memory).
+To simply compile your code first make sure all your sourcefiles are referenced in the Makefile SRCS variable. 
+
+You can then just run `make program` to compile your code into both a ELF binary (can be loaded into gdb) and a bin (for writing straight to flash memory).
 
 
 ## Flash your code
@@ -31,10 +33,14 @@ You can install the `stlink` project at [https://github.com/texane/stlink](https
 
 Use `make flash` to compile the sources specified in the Makefile and write them to device's flash memory. 
 
-Note: This requires you to already be running the `stlink` project and connected to the device by first runnnig the command `st-util`.
-
 ## Debugging
-By default the project is always compiled with the debug parameter `-g`. The Makefile also provides a target to use the `arm-none-eabi-gdb` for remote debugging. You can run this using `make debug` will compile you code, then load it into gdb. You can then run `continue` in the gdb console to start running the code.
+By default the project is always compiled with the debug parameter `-g`. The Makefile also provides a target to use the `arm-none-eabi-gdb` for remote debugging. 
+
+You can run this using `make debug` will compile your code, then load it into gdb. 
+
+You can then run `continue` in the gdb console to start running the code.
+
+Note: This requires you to already be running the `stlink` project and connected to the device by first runnnig the command `st-util`.
 
 ## Notes
 This was hacked together in one very long night. If you notice any errors you can either open an issue or fork it and make a pull request.
