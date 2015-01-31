@@ -1,8 +1,9 @@
-STM32L1-Discovery arm-none-eabi- toolchain template
+STM32L1-Discovery arm-none-eabi- toolchain template for asm
 =====
 
 This is a template for using the STM32L1-Discovery with the GNU ARM toolchain.
-You can either build it yourself or use a pre-compiled version from somewhere such as CodeSourcery.
+This template assumes you are writing just assembly code.
+You can either build it yourself or use a pre-compiled version from somewhere such as [launchpad.net](https://launchpad.net/gcc-arm-embedded/+download)
 
 This template is based around the first lab released for COMS20001.
 
