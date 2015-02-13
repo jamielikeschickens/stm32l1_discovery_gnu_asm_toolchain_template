@@ -30,7 +30,7 @@
 	.extern Lab_Start
 		
 	@ This will be ThumbV1 code
-	.code 16
+	.thumb
 	
 SystemInit:
 	@ intialise the LED pins to support flashing the LEDs
@@ -89,9 +89,8 @@ Button_Wait:
 	B Init_End
 
 Init_End:
-	@LDR r0, =Lab_Start
-	@BX r0
-	BL Lab_Start
+	LDR r0, =Lab_Start
+	BX r0
 
 	@ Return point is reached only after Lab code is completed
 	BX lr 

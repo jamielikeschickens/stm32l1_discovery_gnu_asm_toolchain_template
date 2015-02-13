@@ -1,13 +1,8 @@
-@ COMS20001 Skeleton for Lab1
-@ (C) Simon J. Hollis, Jan 2015
-@ simon@cs.bris.ac.uk
-@ Define this file as containing code and called "Lab1"
-
 @AREA Lab1, CODE, READONLY
 .section .text
 
 @ We will write ThumbV1 code
-.code 16
+.thumb
 
 @ Import some global symbols:
 @ The address to read from to read the button
@@ -18,10 +13,17 @@
 .extern TIM2_CNT
 @ Define the first line of user code
 .global Lab_Start
+
+.thumb_func
 Lab_Start:
 @ ===================
 @ Your code goes here
 @ ===================
+
+	LDR r1, =GPIOB_ODR
+	LDR r2, =0x00
+	STR r2, [r1]
+
 @ ================
 @ End your program
 @ ================

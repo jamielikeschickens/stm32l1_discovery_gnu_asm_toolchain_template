@@ -44,6 +44,9 @@ You can then run `continue` in the gdb console to start running the code.
 Note: This requires you to already be running the `stlink` project and connected to the device by first runnnig the command `st-util`.
 
 ## Notes
+When using `BX` `BLX` or any other instructions that have the potential to switch from ARM mode to thumb mode, ensure you preface the label with `.thumb_func`. This is due to the fact the STM32L1 only runs thumb code.
+This is particularly important when using interrupt handlers as I found out the hard way.
+
 This was hacked together in one very long night. If you notice any errors you can either open an issue or fork it and make a pull request.
 
 If you're interested in running OpenOCD I suggest you look at this Makefile [https://github.com/willprice/STM32L1-Discovery-baremetal-toolchain/blob/master/Makefile](https://github.com/willprice/STM32L1-Discovery-baremetal-toolchain/blob/master/Makefile)
