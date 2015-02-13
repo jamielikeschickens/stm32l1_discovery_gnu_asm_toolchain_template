@@ -26,12 +26,12 @@
 .global GPIOA_IDR
 .global GPIOB_ODR
 .global TIM2_CNT
-		
-	.extern Lab_Start
-		
-	@ This will be ThumbV1 code
-	.thumb
-	
+
+.extern Lab_Start
+
+@ This will be ThumbV1 code
+.thumb
+
 SystemInit:
 	@ intialise the LED pins to support flashing the LEDs
 	@ Blue LED is on pin PB6@ Green LED is on pin PB7
@@ -94,6 +94,5 @@ Init_End:
 
 	@ Return point is reached only after Lab code is completed
 	BX lr 
-	.align
-	
-	.end
+.align
+.end
